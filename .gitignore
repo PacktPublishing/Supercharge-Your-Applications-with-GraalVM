@@ -9,4 +9,5 @@
 *.dSYM
 node_modules
 *.o
+*.bgv
 
