@@ -7,3 +7,5 @@
 *.log
 *.out
 *.dSYM
+*.bgv
+node_modules
