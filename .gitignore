@@ -3,12 +3,9 @@
 .settings
 .project
 .classpath
-<<<<<<< HEAD
 *.class
 *.log
 *.out
 *.dSYM
 *.bgv
 node_modules
-=======
->>>>>>> parent of 18f0a57 (Updated versions of the source files)
