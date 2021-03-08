@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "types": [
+    { "id": 0, "typeName": "int" },
+    { "id": 1, "typeName": "void" },
+    { "id": 2, "typeName": "FibonacciCalculator2" },
+    { "id": 3, "typeName": "char" },
+    { "id": 4, "typeName": "java.lang.String" },
+    { "id": 5, "typeName": "java.lang.Object" },
+    { "id": 6, "typeName": "boolean" },
+    { "id": 7, "typeName": "java.util.HashMap" },
+    { "id": 8, "typeName": "java.util.LinkedHashMap" },
+    { "id": 9, "typeName": "java.io.ExpiringCache$1" },
+    { "id": 10, "typeName": "[B" },
+    { "id": 11, "typeName": "java.lang.StringLatin1" },
+    { "id": 12, "typeName": "java.util.HashMap$Node" }
+  ],
+  "methods": [
+    { "id": 0, "methodName": "findFibonacci", "signature": [ 2, 1, 0 ] },
+    { "id": 1, "methodName": "charAt", "signature": [ 4, 3, 0 ] },
+    { "id": 2, "methodName": "hashCode", "signature": [ 4, 0 ] },
+    { "id": 3, "methodName": "<init>", "signature": [ 5, 1 ] },
+    { "id": 4, "methodName": "putVal", "signature": [ 7, 5, 0, 5, 5, 6, 6 ] },
+    { "id": 5, "methodName": "equals", "signature": [ 11, 6, 10, 10 ] },
+    { "id": 6, "methodName": "newNode", "signature": [ 7, 12, 0, 5, 5, 12 ] },
+    { "id": 7, "methodName": "afterNodeInsertion", "signature": [ 7, 1, 6 ] },
+    { "id": 8, "methodName": "equals", "signature": [ 4, 6, 5 ] },
+    { "id": 9, "methodName": "charAt", "signature": [ 11, 3, 10, 0 ] }
+  ],
+  "hotnessPoints": [
+    { "methodBciList": "0:0", "records": [ 19 ] },
+    { "methodBciList": "1:0", "records": [ 8376 ] },
+    { "methodBciList": "2:0", "records": [ 1375 ] },
+    { "methodBciList": "3:0", "records": [ 767 ] }
+  ],
+  "conditionalPoints": [
+    { "methodBciList": "2:6", "records": [ 9, 0, 856, 47, 1, 519 ] },
+    { "methodBciList": "0:13", "records": [ 16, 0, 9984869648, 13, 1, 0 ] },
+    { "methodBciList": "2:14", "records": [ 47, 0, 34, 17, 1, 822 ] }
+  ],
+  "invokePoints": [
+
+  ],
+  "monitorsProfile": {
+    "records": [  ] 
+  }
+}

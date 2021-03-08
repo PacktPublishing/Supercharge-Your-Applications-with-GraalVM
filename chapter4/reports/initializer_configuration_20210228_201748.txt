@@ -1,0 +1,660 @@
+Avoids unnecessary reflection in the image -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.management.ManagementFeature.duringSetup
+Core JDK classes are initialized at build time -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+Core JDK classes are initialized at build time for better performance -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+Initializes AWT -> RUN_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+Native Image classes are always initialized at build time -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+Needed for Native Image substitutions -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+Required for sun.text.bidi.BidiBase.NumericShapings -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.oracle.graal -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+com.oracle.svm -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+com.oracle.svm.core.SubstrateUtil$Target_com_oracle_svm_core_SubstrateUtil -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.SubstrateUtil$Target_java_io_FileOutputStream -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.Target_java_lang_Terminator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.aarch64.AArch64LibCHelper$CPUFeatures -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.aarch64.AArch64LibCHelperDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.core.amd64.AMD64LibCHelper$CPUFeatures -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.amd64.AMD64LibCHelperDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.core.c.CTypeConversionSupportImpl$Target_java_nio_DirectByteBuffer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.c.Target_org_graalvm_nativeimage_c_function_CEntryPointLiteral -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.c.function.CEntryPointCreateIsolateParameters -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.c.function.CEntryPointNativeFunctions$IsolatePointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.core.c.function.CEntryPointNativeFunctions$IsolateThreadPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.core.classinitialization.ClassInitializationInfo$InitState -> BUILD_TIME reasons: enums referred in annotations must be initialized
+com.oracle.svm.core.code.CodeInfo -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.code.CodeInfoImpl -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.code.InstalledCodeObserver$InstalledCodeObserverHandle -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.code.SimpleCodeInfoQueryResult -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.code.UntetheredCodeInfo -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.genscavenge.AlignedHeapChunk$AlignedHeader -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.genscavenge.GCImpl$CollectionVMOperationData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.genscavenge.HeapChunk$Header -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.genscavenge.HeapChunk$HeaderPadding -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.genscavenge.Target_java_lang_Runtime -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.genscavenge.ThreadLocalAllocation$Descriptor -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.genscavenge.UnalignedHeapChunk$UnalignedHeader -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.graal.llvm.runtime.LLVMExceptionUnwind -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.graal.llvm.runtime.LLVMExceptionUnwind$_Unwind_Context -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.graal.llvm.runtime.LLVMExceptionUnwind$_Unwind_Exception -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.graal.llvm.util.LLVMDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_Cleaner -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_Cleaner_Cleanable -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_Finalizer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_Finalizer_FinalizerThread -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_Reference -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_ReferenceQueue -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_Reference_ReferenceHandler -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_java_lang_ref_SoftReference -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_jdk_internal_ref_Cleaner -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_jdk_internal_ref_CleanerFactory -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_jdk_internal_ref_CleanerImpl -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_jdk_internal_ref_PhantomCleanable -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_jdk_internal_ref_SoftCleanable -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.heap.Target_jdk_internal_ref_WeakCleanable -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.DynamicHub -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.HubType -> BUILD_TIME reasons: enums referred in annotations must be initialized
+com.oracle.svm.core.hub.Target_java_lang_Class_ReflectionData -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.Target_jdk_internal_reflect_ConstantPool -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.Target_jdk_internal_reflect_ReflectionFactory -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.Target_sun_reflect_annotation_AnnotationType -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.Target_sun_reflect_generics_reflectiveObjects_LazyReflectiveObjectGenerator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.Target_sun_reflect_generics_reflectiveObjects_TypeVariableImpl -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.hub.Target_sun_reflect_generics_reflectiveObjects_WildcardTypeImpl -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_Unsafe_Core -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_com_oracle_svm_core_util_VMError -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_DeleteOnExitHook -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_ExpiringCache -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_FileDescriptor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_FileDescriptor_JNI -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_FileInputStream_JNI -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_FileOutputStream_JNI -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_FileSystem -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_ObjectInputStream -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_ObjectStreamClass -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_ObjectStreamClass_Caches -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_io_UnixFileSystem -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_ApplicationShutdownHooks -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_AssertionStatusDirectives -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_ClassLoader -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_ClassLoader_NativeLibrary -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_ClassValue -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Compiler -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Enum -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Math -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Module -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Module$ReflectionData -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_NamedPackage -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_NullPointerException -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Object -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Package -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Runtime -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_SecurityManager -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Shutdown -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_StackFrameInfo -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_StackStreamFactory -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_StackWalker -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_StrictMath -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_String -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_System -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_Throwable -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleBooleans_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleBooleans_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleBooleans_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleBytes_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleBytes_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleBytes_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleChars_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleChars_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleChars_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleDoubles_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleDoubles_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleDoubles_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleFloats_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleFloats_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleFloats_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleInts_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleInts_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleInts_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleLongs_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleLongs_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleLongs_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleObjects_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleObjects_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleObjects_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleShorts_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleShorts_FieldInstanceReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_invoke_VarHandleShorts_FieldStaticReadOnly -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_lang_reflect_Array -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_math_BigInteger -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_net_URL -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_net_URLClassLoader -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_nio_Bits_JDK11 -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_nio_Buffer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_nio_channels_spi_SelectorProvider -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_nio_charset_Charset -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_nio_charset_CharsetEncoder -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_nio_file_spi_FileSystemProvider -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_security_AccessControlContext -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_security_AccessController -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_security_Policy -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_security_Policy_PolicyInfo -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_text_BreakIterator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_text_DateFormatSymbols -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_time_zone_ZoneRules -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_AbstractMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_Calendar -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_Collections_SynchronizedMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_Collections_UnmodifiableMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_Currency -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_EnumMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_HashMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_Hashtable -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_IdentityHashMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_JapaneseImperialCalendar -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_ListResourceBundle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_Locale -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_Optional -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_ResourceBundle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_ServiceLoader -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_ServiceLoader_ModuleServicesLookupIterator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_SplittableRandom -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_TimeZone -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_TreeMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_TreeMap_EntrySet -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_TreeMap_KeySet -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_WeakHashMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_CompletableFuture -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentHashMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentHashMap_EntrySetView -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentHashMap_KeySetView -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentHashMap_ValuesView -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentSkipListMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentSkipListMap_EntrySet -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentSkipListMap_KeySet -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentSkipListMap_SubMap -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ConcurrentSkipListMap_Values -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_Exchanger -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ForkJoinPool -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ForkJoinTask -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ForkJoinTask_ExceptionNode -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_ThreadLocalRandom -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_atomic_AtomicIntegerFieldUpdater_AtomicIntegerFieldUpdaterImpl -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_atomic_AtomicLongFieldUpdater_CASUpdater -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_atomic_AtomicLongFieldUpdater_LockedUpdater -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_concurrent_atomic_AtomicReferenceFieldUpdater_AtomicReferenceFieldUpdaterImpl -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_logging_SimpleFormatter_JDK11OrLater -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_zip_ZipFile_Source -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_java_util_zip_ZipFile_Source_Key -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_javax_crypto_CryptoAllPermission -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_javax_crypto_JarVerifier -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_javax_crypto_JceSecurity -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_javax_crypto_JceSecurityManager -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_javax_crypto_ProviderVerifier -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_javax_net_ssl_SSLContext -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_access_JavaAWTAccess -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_access_JavaLangAccess -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_access_SharedSecrets -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_jrtfs_JrtFileSystemProvider_JRTDisabled -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_loader_BootLoader -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_loader_BuiltinClassLoader -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_loader_ClassLoaderHelper -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_loader_Loader -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_loader_URLClassPath -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_misc_VM -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_module_SystemModuleFinders_SystemImage_JRTDisabled -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_perf_Perf -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_perf_PerfCounter -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_reflect_AccessorGenerator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_reflect_MethodAccessorGenerator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_reflect_Reflection -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_internal_reflect_SerializationConstructorAccessorImpl -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_nashorn_api_scripting_ClassFilter -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_nashorn_api_scripting_NashornScriptEngineFactory -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_nio_zipfs_ZipFileSystemProvider -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_jdk_vm_ci_services_Services -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_misc_Unsafe_JDK11OrLater -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_net_www_protocol_jrt_Handler_JRTDisabled -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_nio_fs_UnixFileSystem -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_nio_fs_UnixFileSystemProvider -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_nio_fs_UnixPath -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_reflect_misc_MethodUtil -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_security_provider_PolicyFile -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_security_provider_PolicySpiFile -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_security_ssl_TrustStoreManager -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_security_ssl_TrustStoreManager_TrustAnchorManager -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_security_ssl_TrustStoreManager_TrustStoreDescriptor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_BuddhistCalendar -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_calendar_CalendarSystem -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_locale_provider_AuxLocaleProviderAdapter -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_locale_provider_JRELocaleProviderAdapter -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_locale_provider_LocaleProviderAdapter -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_locale_provider_LocaleResources -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_locale_provider_LocaleServiceProviderPool -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_locale_provider_TimeZoneNameUtility -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_resources_OpenListResourceBundle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.Target_sun_util_resources_ParallelListResourceBundle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.management.Target_java_lang_management_ManagementFactory -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.management.Target_sun_management_ManagementFactoryHelper -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.proxy.Target_java_lang_reflect_Proxy -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk.proxy.Target_jdk_internal_loader_ClassLoaderValue -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk11.Target_jdk_internal_util_StaticProperty -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.jdk11.Target_sun_util_resources_Bundles -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_com_oracle_svm_core_monitor_MultiThreadedMonitorSupport -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_java_lang_ref_ReferenceQueue_Lock -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_java_util_concurrent_locks_AbstractOwnableSynchronizer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_java_util_concurrent_locks_AbstractQueuedSynchronizer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_java_util_concurrent_locks_AbstractQueuedSynchronizer_ConditionObject -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_java_util_concurrent_locks_ReentrantLock -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_java_util_concurrent_locks_ReentrantLock_NonfairSync -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.monitor.Target_java_util_concurrent_locks_ReentrantLock_Sync -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.option.Target_org_graalvm_compiler_options_OptionKey -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.PosixUtils$Target_java_io_FileDescriptor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.PosixUtils$Target_java_lang_UNIXProcess -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.Target_java_io_FilterInputStream -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.Target_java_io_UnixFileSystem_JNI -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.Target_java_lang_System_Posix -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.Target_jdk_internal_misc_Signal -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.Target_jdk_internal_misc_VM -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.Target_sun_security_provider_NativePRNG -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.Target_sun_security_provider_NativePRNG_RandomIO -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.darwin.Target_java_lang_System_Darwin -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.posix.headers.CSunMiscSignal -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Dlfcn -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Dlfcn$Dl_info -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Errno -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Fcntl -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Limits -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Locale -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Mman -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.PosixDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.core.posix.headers.Pthread -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Pthread$pthread_attr_t -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Pthread$pthread_cond_t -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Pthread$pthread_condattr_t -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Pthread$pthread_mutex_t -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Pthread$pthread_tPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.core.posix.headers.Pwd -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Pwd$passwd -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Resource -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Resource$rlimit -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Sched -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Signal -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Signal$DarwinSignalEnum -> BUILD_TIME reasons: classes annotated with CEnum are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Signal$MContext64 -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Signal$SignalEnum -> BUILD_TIME reasons: classes annotated with CEnum are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Signal$sigaction -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Signal$siginfo_t -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Signal$sigset_tPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.core.posix.headers.Signal$ucontext_t -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Stdlib -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Sysctl -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Time -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Time$timespec -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Time$timeval -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Times -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Times$tms -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Unistd -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Utsname -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.Utsname$utsname -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.Wait -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinDyld -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinPthread -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinStat -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinStat$stat64 -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinSysctl -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinSyslimits -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinTime -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinTime$MachTimebaseInfo -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.headers.darwin.DarwinVirtualMemory -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.Foundation -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.core.posix.headers.darwin.Foundation$NSOperatingSystemVersion -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.core.posix.thread.Target_java_lang_Thread -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.stack.JavaFrameAnchor -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.stack.JavaStackWalk -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.thread.JavaThreads$ThreadStartData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.thread.NativeVMOperationData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.core.thread.Target_java_lang_Thread -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.thread.Target_java_lang_ThreadGroup -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.thread.Target_jdk_internal_misc_Unsafe_JavaThreads -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.core.util.Target_com_oracle_svm_core_util_Counter -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.core.EnterpriseAddressRangeCommittedMemoryProvider$FreeListNode -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.enterprise.core.LibJITDebug -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.enterprise.core.LibJITDebug$a -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.enterprise.core.LibJITDebug$jit_code_entry -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.core.SubstrateDebugInfoInstaller$Handle -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.enterprise.core.auximage.AuxiliaryImageHeader -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.enterprise.gc.g1.G1VMOperations$G1VMOperationData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.enterprise.gc.g1.G1VMOperations$G1VMOperationWrapperData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$CodeInfos -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$CodeInfosPerThread -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$GCConstants -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$HeapOptions -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$StackFrame -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$StackFrames -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$StackFramesPerThread -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$a -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$b -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.SharedGCStructs$c -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.a -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.b -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.enterprise.gc.g1.nativelib.c -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_EventHandlerCreator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_EventWriter -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_JVM -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_SecuritySupport -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_StringPool -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_instrument_JDKEvents -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_jfc_JFC -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jfr.Target_jdk_jfr_internal_jfc_JFC_KnownConfiguration -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.enterprise.jitprofiling.vtune.Jitprofiling -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.enterprise.jitprofiling.vtune.Jitprofiling$LineNumberInfo -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.jitprofiling.vtune.Jitprofiling$a -> BUILD_TIME reasons: classes annotated with CEnum are always initialized
+com.oracle.svm.enterprise.jitprofiling.vtune.Jitprofiling$iJIT_Method_Inline_Load -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.jitprofiling.vtune.Jitprofiling$iJIT_Method_Load_V2 -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.enterprise.jitprofiling.vtune.VTuneDynamicCodeObserver$JITMethodHandle -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.enterprise.jitprofiling.vtune.a -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.graal.Target_org_graalvm_compiler_printer_NoDeadCodeVerifyHandler -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.graal.isolated.CodeInstallInfo -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.graal.isolated.ConstantData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.graal.isolated.ForeignIsolateReferenceAdjusterData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.graal.meta.Target_java_lang_Integer_IntegerCache -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.hosted.c.BuiltinDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.hosted.c.DirectivesExtension -> BUILD_TIME reasons: super type of com.oracle.svm.hosted.c.BuiltinDirectives
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_AnnotationDefault_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_Attribute_Factory -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_BootstrapMethods_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_CharacterRangeTable_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_ClassReader -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_Code_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_CompilationID_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_ConstantValue_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_Deprecated_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_EnclosingMethod_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_Exceptions_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_InnerClasses_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_LineNumberTable_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_LocalVariableTable_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_LocalVariableTypeTable_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_MethodParameters_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_RuntimeInvisibleAnnotations_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_RuntimeInvisibleParameterAnnotations_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_RuntimeInvisibleTypeAnnotations_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_RuntimeVisibleAnnotations_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_RuntimeVisibleParameterAnnotations_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_RuntimeVisibleTypeAnnotations_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_Signature_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_SourceDebugExtension_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_SourceFile_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_SourceID_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_StackMapTable_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_StackMap_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jdktools.Target_com_sun_tools_classfile_Synthetic_attribute -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jni.functions.JNIFunctions$Target_java_nio_Buffer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jni.functions.JNIFunctions$Target_java_nio_DirectByteBuffer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.jni.nativeapi.JNIArrayReleaseModes -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIEnvironment -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIEnvironmentPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.jni.nativeapi.JNIErrors -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIFieldId -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIHeaderDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.oracle.svm.jni.nativeapi.JNIInvokeInterface -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIJavaVM -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIJavaVMAttachArgs -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIJavaVMInitArgs -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIJavaVMOption -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIJavaVMPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.jni.nativeapi.JNIMethodId -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNINativeInterface -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNINativeMethod -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIObjectRefType -> BUILD_TIME reasons: classes annotated with CEnum are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIValue -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.jni.nativeapi.JNIVersion -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_BoundMethodHandle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_BoundMethodHandle_Specializer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_BoundMethodHandle_SpeciesData -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_BoundMethodHandle_Species_L -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_ClassSpecializer -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_ClassSpecializer_Factory -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_ClassSpecializer_SpeciesData -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_InvokerBytecodeGenerator -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_Invokers -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_LambdaForm -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_LambdaForm_NamedFunction -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MemberName -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandleImpl -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandleImpl_ArrayAccessor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandleImpl_IntrinsicMethodHandle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandleNatives -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandleNatives_CallSiteContext -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandleNatives_Constants -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandleStatics -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodHandles_Lookup -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodType -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodTypeForm -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_MethodType_ConcurrentWeakInternSet -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.methodhandles.Target_java_lang_invoke_SimpleMethodHandle -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_java_lang_reflect_AccessibleObject -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_java_lang_reflect_Constructor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_java_lang_reflect_Executable -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_java_lang_reflect_Field -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_java_lang_reflect_Method -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_java_lang_reflect_ReflectAccess -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_jdk_internal_misc_Unsafe_Reflection -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_jdk_internal_reflect_ConstructorAccessor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_jdk_internal_reflect_FieldAccessor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.reflect.target.Target_jdk_internal_reflect_MethodAccessor -> BUILD_TIME reasons: substitutions are always initialized
+com.oracle.svm.truffle.isolated.IsolatedCompilationResultData -> BUILD_TIME reasons: classes annotated with RawStructure are always initialized
+com.oracle.svm.truffle.nfi.LibFFI$ClosureData -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.truffle.nfi.NativeAPI -> BUILD_TIME reasons: classes annotated with CContext are always initialized
+com.oracle.svm.truffle.nfi.NativeAPI$NativeTruffleContext -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.NativeAPI$NativeTruffleEnv -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.NativeAPI$TruffleNativeAPI -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.NativeAPI$TruffleThreadAPI -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.NativeSignature$CifData -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.truffle.nfi.libffi.LibFFI -> BUILD_TIME reasons: classes with CConstant annotations are always initialized and classes annotated with CContext are always initialized
+com.oracle.svm.truffle.nfi.libffi.LibFFI$ffi_arg -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.libffi.LibFFI$ffi_cif -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.libffi.LibFFI$ffi_closure -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.libffi.LibFFI$ffi_type -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+com.oracle.svm.truffle.nfi.libffi.LibFFI$ffi_type_array -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+com.oracle.svm.truffle.nfi.libffi.LibFFIHeaderDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+com.sun.crypto.provider -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.crypto.provider.SunJCE$SecureRandomHolder -> RERUN reasons: for substitutions
+com.sun.java.util.jar.pack -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.management.ManagementFeature.duringSetup
+com.sun.jmx.mbeanserver.MXBeanMappingFactory -> BUILD_TIME reasons: super type of com.sun.jmx.mbeanserver.DefaultMXBeanMappingFactory
+com.sun.jndi.dns.DnsClient -> RERUN reasons: Contains Random references, therefore can't be included in the image heap.
+com.sun.management -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.naming.internal -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.naming.internal.ResourceManager$AppletParameter -> RUN_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.net.ssl -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.nio.file -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.nio.sctp -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.nio.zipfs -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.security.auth -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.security.cert.internal.x509 -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.security.jgss -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.security.ntlm -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+com.sun.security.sasl -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.awt.font.NumericShaper -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.awt.font.TextAttribute -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.io -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.io.File$TempDirectory -> RERUN reasons: for JDK native code support via JNI
+java.io.FilePermission -> RERUN reasons: for JDK native code support via JNI
+java.io.RandomAccessFile -> RERUN reasons: for JDK native code support via JNI
+java.lang -> BUILD_TIME reasons: super type of java.util.ResourceBundle
+java.lang.Enum -> BUILD_TIME reasons: super type of com.oracle.svm.enterprise.jitprofiling.vtune.Jitprofiling$a and super type of com.oracle.svm.jni.nativeapi.JNIObjectRefType and super type of com.oracle.svm.core.posix.headers.Signal$SignalEnum and others
+java.lang.Exception -> BUILD_TIME reasons: super type of org.ietf.jgss.GSSException
+java.lang.Math$RandomNumberGeneratorHolder -> RERUN reasons: Must not be initialized at build time in the final image.
+java.lang.Object -> BUILD_TIME reasons: super type of java.util.ResourceBundle and super type of sun.security.util.UntrustedCertificates and super type of java.util.Dictionary and others
+java.lang.ProcessEnvironment -> RERUN reasons: for JDK native code support via JNI
+java.lang.ProcessHandleImpl -> RERUN reasons: for JDK native code support via JNI
+java.lang.ProcessHandleImpl$Info -> RERUN reasons: for JDK native code support via JNI
+java.lang.ProcessImpl -> RERUN reasons: for JDK native code support via JNI
+java.lang.StrictMath$RandomNumberGeneratorHolder -> RERUN reasons: Must not be initialized at build time in the final image.
+java.lang.Terminator -> RERUN reasons: for JDK native code support via JNI
+java.lang.Throwable -> BUILD_TIME reasons: super type of java.lang.Exception
+java.lang.reflect.AnnotatedElement -> BUILD_TIME reasons: super type of com.oracle.svm.core.hub.DynamicHub and super type of java.lang.reflect.GenericDeclaration
+java.lang.reflect.Type -> BUILD_TIME reasons: super type of com.oracle.svm.core.hub.DynamicHub
+java.math -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.net -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.net.AbstractPlainDatagramSocketImpl -> RERUN reasons: for JDK native code support via JNI
+java.net.AbstractPlainSocketImpl -> RERUN reasons: for JDK native code support via JNI
+java.net.DatagramPacket -> RERUN reasons: for JDK native code support via JNI
+java.net.DefaultDatagramSocketImplFactory -> RERUN reasons: for JDK native code support via JNI
+java.net.DefaultInterface -> RERUN reasons: for JDK native code support via JNI
+java.net.InetAddress -> RERUN reasons: for JDK native code support via JNI
+java.net.NetworkInterface -> RERUN reasons: for JDK native code support via JNI
+java.net.PlainDatagramSocketImpl -> RERUN reasons: for JDK native code support via JNI
+java.net.PlainSocketImpl -> RERUN reasons: for JDK native code support via JNI
+java.net.SocketInputStream -> RERUN reasons: for JDK native code support via JNI
+java.net.SocketOutputStream -> RERUN reasons: for JDK native code support via JNI
+java.nio -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.nio.file.Files$FileTypeDetectors -> RERUN reasons: for JDK native code support via JNI
+java.nio.file.TempFileHelper -> RERUN reasons: for JDK native code support via JNI
+java.security -> BUILD_TIME reasons: super type of org.jcp.xml.dsig.internal.dom.XMLDSigRI
+java.security.Provider -> BUILD_TIME reasons: super type of org.jcp.xml.dsig.internal.dom.XMLDSigRI
+java.text -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.text.AttributedCharacterIterator$Attribute -> BUILD_TIME reasons: super type of java.awt.font.TextAttribute
+java.time -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+java.util -> BUILD_TIME reasons: super type of sun.util.resources.cldr.CalendarData
+java.util.Dictionary -> BUILD_TIME reasons: super type of java.util.Hashtable
+java.util.Hashtable -> BUILD_TIME reasons: super type of java.util.Properties
+java.util.ListResourceBundle -> BUILD_TIME reasons: super type of sun.util.resources.cldr.CalendarData and super type of sun.text.resources.BreakIteratorInfo and super type of sun.text.resources.CollationData and others
+java.util.Map -> BUILD_TIME reasons: super type of java.util.Hashtable
+java.util.Properties -> BUILD_TIME reasons: super type of java.security.Provider
+java.util.ResourceBundle -> BUILD_TIME reasons: super type of java.util.ListResourceBundle and super type of sun.util.resources.OpenListResourceBundle and super type of sun.util.resources.BreakIteratorResourceBundle
+java.util.UUID$Holder -> RERUN reasons: for substitutions
+java.util.concurrent.ForkJoinWorkerThread$InnocuousForkJoinWorkerThread -> RERUN reasons: innocuousThreadGroup must be initialized at run time
+java.util.prefs.MacOSXPreferences -> RERUN reasons: for JDK native code support via JNI
+java.util.prefs.MacOSXPreferencesFile -> RERUN reasons: for JDK native code support via JNI
+java.util.zip.Adler32 -> RERUN reasons: for JDK native code support via JNI
+java.util.zip.CRC32 -> RERUN reasons: for JDK native code support via JNI
+java.util.zip.Deflater -> RERUN reasons: for JDK native code support via JNI
+java.util.zip.Inflater -> RERUN reasons: for JDK native code support via JNI
+javax.annotation.processing -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.crypto -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.lang.model -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.management -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.naming -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.net -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.security.auth -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.security.cert -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.security.sasl -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+javax.tools -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+jdk.internal -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+jdk.internal.net.http.websocket.OpeningHandshake -> RERUN reasons: for JDK native code support via JNI
+jdk.jfr -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+jdk.net -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+jdk.net.ExtendedSocketOptions -> RERUN reasons: for JDK native code support via JNI
+jdk.net.ExtendedSocketOptions$PlatformSocketOptions -> RERUN reasons: for JDK native code support via JNI
+jdk.nio -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+jdk.vm.ci -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+jdk.vm.ci.meta.DeoptimizationAction -> BUILD_TIME reasons: enums referred in annotations must be initialized
+jdk.vm.ci.meta.DeoptimizationReason -> BUILD_TIME reasons: enums referred in annotations must be initialized
+jdk.vm.ci.meta.JavaKind -> BUILD_TIME reasons: enums referred in annotations must be initialized
+org.graalvm.collections -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.graalvm.compiler -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.graalvm.home -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.graalvm.libgraal.jni.JNI$JNIEnv -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+org.graalvm.libgraal.jni.JNI$JNIHeaderDirectives -> BUILD_TIME reasons: CContext.Directives must be eagerly initialized
+org.graalvm.libgraal.jni.JNI$JNINativeInterface -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+org.graalvm.libgraal.jni.JNI$JValue -> BUILD_TIME reasons: classes annotated with CStruct are always initialized and classes annotated with CContext are always initialized
+org.graalvm.nativeimage -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.graalvm.nativeimage.Isolate -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+org.graalvm.nativeimage.IsolateThread -> BUILD_TIME reasons: classes annotated with CStruct are always initialized
+org.graalvm.nativeimage.c.CContext$Directives -> BUILD_TIME reasons: super type of com.oracle.svm.core.graal.llvm.util.LLVMDirectives and super type of com.oracle.svm.jni.nativeapi.JNIHeaderDirectives and super type of com.oracle.svm.enterprise.jitprofiling.vtune.a and others
+org.graalvm.nativeimage.c.type.CCharPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.CCharPointerPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.CDoublePointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.CFloatPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.CIntPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.CIntPointerPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.CLongPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.CShortPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.VoidPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.nativeimage.c.type.WordPointer -> BUILD_TIME reasons: classes annotated with CPointerTo are always initialized
+org.graalvm.options -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.graalvm.polyglot -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.graalvm.util -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.graalvm.word -> BUILD_TIME reasons: Native Image classes are always initialized at build time
+org.ietf.jgss.GSSException -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+org.ietf.jgss.GSSName -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+org.jcp.xml.dsig.internal.dom.XMLDSigRI -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.TrustStoreManagerFeature.afterRegistration
+sun.invoke -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.launcher -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.management -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.misc -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.net -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.net.ext.ExtendedSocketOptions -> RERUN reasons: for JDK native code support via JNI
+sun.net.www.protocol.http.DigestAuthentication$Parameters -> RERUN reasons: Contains Random references, therefore can't be included in the image heap.
+sun.net.www.protocol.jar.JarFileFactory -> RERUN reasons: for JDK native code support via JNI
+sun.net.www.protocol.jar.JarURLConnection -> RERUN reasons: for JDK native code support via JNI
+sun.nio -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.nio.ch.DatagramChannelImpl -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.FileChannelImpl -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.FileKey -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.IOUtil -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.NativeThread -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.Net -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.ServerSocketChannelImpl -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.SocketOptionRegistry$LazyInitialization -> RERUN reasons: for JDK native code support via JNI
+sun.nio.ch.UnixAsynchronousServerSocketChannelImpl -> RERUN reasons: for JDK native code support via JNI
+sun.nio.fs.UnixNativeDispatcher -> RERUN reasons: for JDK native code support via JNI
+sun.reflect -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.action -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.ec -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.internal.interfaces -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.internal.spec -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.jca -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.jca.JCAUtil$CachedSecureRandomHolder -> RERUN reasons: for substitutions
+sun.security.jgss -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.krb5 -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.krb5.Confounder -> RERUN reasons: for substitutions
+sun.security.krb5.KrbServiceLocator -> RERUN reasons: Contains Random references, therefore can't be included in the image heap.
+sun.security.mscapi -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.pkcs -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.pkcs10 -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.pkcs11 -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.pkcs12 -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.provider -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.provider.AbstractDrbg$SeederHolder -> RERUN reasons: for substitutions
+sun.security.provider.FileInputStreamPool -> RERUN reasons: for substitutions
+sun.security.provider.NativePRNG -> RERUN reasons: for substitutions
+sun.security.provider.NativePRNG$Blocking -> RERUN reasons: for substitutions
+sun.security.provider.NativePRNG$NonBlocking -> RERUN reasons: for substitutions
+sun.security.provider.SecureRandom$SeederHolder -> RERUN reasons: for substitutions
+sun.security.provider.SeedGenerator -> RERUN reasons: for substitutions
+sun.security.rsa -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.smartcardio -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.ssl -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.ssl.SSLContextImpl$DefaultManagersHolder -> RERUN reasons: for reading properties at run time
+sun.security.ssl.SSLLogger -> RERUN reasons: for reading properties at run time
+sun.security.timestamp -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.tools -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.util -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.TrustStoreManagerFeature.afterRegistration
+sun.security.util.UntrustedCertificates -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.TrustStoreManagerFeature.afterRegistration
+sun.security.validator -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.security.x509 -> BUILD_TIME reasons: from feature com.oracle.svm.hosted.jdk.JDKInitializationFeature.afterRegistration
+sun.text -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.text.resources.BreakIteratorInfo -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.text.resources.BreakIteratorResources -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.text.resources.CollationData -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.text.resources.cldr.FormatData -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.text.resources.cldr.FormatData_en -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.logging.resources.logging -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.BreakIteratorResourceBundle -> BUILD_TIME reasons: super type of sun.text.resources.BreakIteratorResources
+sun.util.resources.OpenListResourceBundle -> BUILD_TIME reasons: super type of sun.util.resources.cldr.CurrencyNames_en and super type of sun.util.resources.cldr.CurrencyNames and super type of sun.util.resources.cldr.LocaleNames_en and others
+sun.util.resources.TimeZoneNames -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.TimeZoneNamesBundle -> BUILD_TIME reasons: super type of sun.util.resources.cldr.TimeZoneNames_en and super type of sun.util.resources.cldr.TimeZoneNames and super type of sun.util.resources.TimeZoneNames_en and others
+sun.util.resources.TimeZoneNames_en -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.cldr.CalendarData -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.cldr.CurrencyNames -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.cldr.CurrencyNames_en -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.cldr.LocaleNames -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.cldr.LocaleNames_en -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.cldr.TimeZoneNames -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
+sun.util.resources.cldr.TimeZoneNames_en -> BUILD_TIME reasons: from feature com.oracle.svm.core.jdk.LocalizationFeature.addBundleToCache
