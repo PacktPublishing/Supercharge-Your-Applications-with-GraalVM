@@ -10,4 +10,7 @@
 node_modules
 *.o
 *.bgv
+node_modules
+__*
+
 
