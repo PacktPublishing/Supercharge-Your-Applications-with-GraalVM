@@ -10,6 +10,8 @@ public class FibonacciWasmCaller {
             File file = new File("fibonacci.wasm");
             byte[] wasmBinaryArray = Files.readAllBytes(file.toPath());
             Context.Builder contextBuilder = Context.newBuilder("wasm");
+            contextBuilder.option("wasm.Builtins", "wasi_snapshot_preview1");
+            
             Source.Builder sourceBuilder = Source.newBuilder("wasm", ByteSequence.create(wasmBinaryArray), "fibonacci");
             Source source = sourceBuilder.build();
             Context context = contextBuilder.build();
@@ -20,8 +22,8 @@ public class FibonacciWasmCaller {
             System.out.println((bindings.getMemberKeys()));
 
             Value main = bindings.getMember("main");
-            System.out.println(main.hasMembers());
-            System.out.println(main.getMemberKeys());
+            //main.execute();
+            System.out.println(main.canExecute());
 
         } catch (Exception e) {
             e.printStackTrace();
