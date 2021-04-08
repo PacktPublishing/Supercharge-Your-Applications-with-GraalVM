@@ -1,0 +1,9 @@
+[
+  {
+    "name" : "com.abvijay.chapter9.fn.BookInfoService",
+    "methods" : [
+      { "name" : "getBookInfo" },
+      { "name" : "<init>" }
+    ]
+  }
+]

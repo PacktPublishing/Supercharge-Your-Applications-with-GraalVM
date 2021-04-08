@@ -9,6 +9,7 @@
 	],
 	"settings": {
 		"java.completion.enabled": false,
-		"java.debug.settings.enableRunDebugCodeLens": false
+		"java.debug.settings.enableRunDebugCodeLens": false,
+		"java.configuration.updateBuildConfiguration": "automatic"
 	}
 }
