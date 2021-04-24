@@ -1,13 +1,20 @@
+import React, { useState, useEffect, useMemo } from 'react';
 
 import './App.css';
-import BookList from './components/BookList';
 import './components/Book-Catalogue.css';
 
-function App() {
+import Home from './components/Home';
+import {CurrentUserContext} from './components/CurrentUserContext';
+
+
+const App = () => {
+  const [user, setUser] = useState(null);
+  const value = useMemo(() => ({ user, setUser }), [user, setUser]);
+
   return (
-    <div className="App">
-        <BookList/>
-    </div>
+    <CurrentUserContext.Provider value={value}>
+      <Home />
+    </CurrentUserContext.Provider>
   );
 }
 

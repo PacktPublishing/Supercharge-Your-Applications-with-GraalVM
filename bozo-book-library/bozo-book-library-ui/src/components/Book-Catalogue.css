@@ -29,8 +29,8 @@
 }
 
 .u-section-1 .u-image-1 {
-  height: 318px;
-  margin: 0 auto 0 0;
+  height: 200px;
+  margin: auto auto auto auto;
   
 }
 
@@ -172,10 +172,10 @@
   }
 
   .u-section-1 .u-list-1 {
-    min-height: 490px;
+    min-height: 250px;
     grid-template-columns: repeat(3, calc(33.333333333333336% - 16px));
     height: auto;
-    width: 940px;
+    width: 500px;
   }
 
   .u-section-1 .u-image-1 {
