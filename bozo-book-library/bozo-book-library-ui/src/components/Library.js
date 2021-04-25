@@ -16,11 +16,12 @@ const Library = (props) => {
         getLibraryBooks();
     }, [currentPage, searchQuery]);
 
-
+    const BOOK_INFO_SERVICE_URL = process.env.REACT_APP_BOOK_INFO_SERVICE_URL
+    const BOOK_LIB_SERVICE_URL= process.env.REACT_APP_BOOK_LIB_SERVICE_URL
 
     const getBooks = (bookids) => {
         var bookidsJson = JSON.stringify(bookids);
-        fetch('http://localhost:8080/graphql', {
+        fetch(BOOK_INFO_SERVICE_URL+'/graphql', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -53,10 +54,8 @@ const Library = (props) => {
     }
 
 
-
-
     const getLibraryBooks = () => {
-        fetch('http://localhost:9090/bozolib/get/vijjuk@gmail.com')
+        fetch(BOOK_LIB_SERVICE_URL+'/get/'+{user})
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -117,7 +116,7 @@ const Library = (props) => {
                                             }
                                             return (
                                                 <div>
-                                                    <Book bookId={volume.id} bookname={volume.volumeInfo.title} bookdescription={volume.volumeInfo.description} author={volume.volumeInfo.authors} imageLink={thumbnail} />
+                                                    <Book bookId={volume.id} bookname={volume.volumeInfo.title} bookdescription={volume.volumeInfo.description} author={volume.volumeInfo.authors} imageLink={thumbnail}  removeButton={true}/>
                                                 </div>)
                                         })}
                                     </div>

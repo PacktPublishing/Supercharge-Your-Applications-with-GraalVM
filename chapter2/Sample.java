@@ -1,11 +1,9 @@
 public class Sample {
     public static void main(String[] args) {
         Sample samp = new Sample();
-        while (true) {
         for(int i=0; i<1000000; i++) {
             samp.performOperation();
         }
-    }
     }
 
     public void performOperation() {
