@@ -1,0 +1,48 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-library-ui-deployments
+  namespace: bozo-book-library-dev
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: book-library-ui-service
+      namespace: bozo-book-library-dev
+  template:
+    metadata:
+      labels: 
+        app: book-library-ui-service
+        namespace: bozo-book-library-dev
+    spec:
+      containers:
+        - name: book-library-ui-service
+          image: abvijaykumar/bozo-book-library-ui-service
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REACT_APP_BOOK_LIB_SERVICE_URL
+              value: "http://localhost:9090/bozolib"
+            - name: REACT_APP_BOOK_INFO_SERVICE_URL
+              value: "http://localhost"
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-library-ui-svc
+  namespace: bozo-book-library-dev
+
+spec:
+  selector: 
+    app: book-library-ui-service
+  
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+    
+  
