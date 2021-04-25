@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: redis-cache-deployments
+  namespace: bozo-book-library-dev
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-cache-service
+      namespace: bozo-book-library-dev
+  template:
+    metadata: 
+      labels:
+        app: redis-cache-service
+        namespace: bozo-book-library-dev
+    spec:
+      - name: redis-cache-service
+        image: redis
