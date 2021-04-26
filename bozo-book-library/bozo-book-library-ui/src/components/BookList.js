@@ -14,14 +14,17 @@ const BookList = () => {
     const [searchResultTotalCount, setSearchResulTotalCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
 
-    const BOOK_INFO_SERVICE_URL = process.env.REACT_APP_BOOK_INFO_SERVICE_URL;
+    //const REACT_APP_BOOK_INFO_SERVICE_URL = process.env.REACT_APP_BOOK_INFO_SERVICE_URL;
+    const REACT_APP_BOOK_INFO_SERVICE_URL = "http://" + window.location.hostname + "/bookinfo";
+    
+    console.log("URL: " + REACT_APP_BOOK_INFO_SERVICE_URL);
 
     useEffect(() => {
         queryService();
     }, [currentPage, searchQuery]);
 
     const queryService = () => {
-        fetch(BOOK_INFO_SERVICE_URL+'/graphql', {
+        fetch(REACT_APP_BOOK_INFO_SERVICE_URL + '/graphql', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -117,7 +120,7 @@ const BookList = () => {
                                             }
                                             return (
                                                 <div>
-                                                    <Book bookId={volume.id} bookname={volume.volumeInfo.title} bookdescription={volume.volumeInfo.description} author={volume.volumeInfo.authors} imageLink={thumbnail} removeButton={false}/>
+                                                    <Book bookId={volume.id} bookname={volume.volumeInfo.title} bookdescription={volume.volumeInfo.description} author={volume.volumeInfo.authors} imageLink={thumbnail} removeButton={false} />
                                                 </div>)
                                         })}
                                     </div>
