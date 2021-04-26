@@ -5,7 +5,7 @@ metadata:
   name: book-info-service-deployments
   namespace: bozo-book-library-dev
 spec:
-  replicas: 3
+  replicas: 1
   selector: 
     matchLabels:
       app: book-info-service

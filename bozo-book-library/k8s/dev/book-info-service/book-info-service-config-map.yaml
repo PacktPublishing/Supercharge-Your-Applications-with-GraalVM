@@ -7,7 +7,7 @@ data:
   quarkus.http.cors.origins: "*"
   quarkus.http.cors.headers: "accept, authorization, content-type, x-requested-with"
   quarkus.http.cors.methods: "GET, OPTIONS, POST"
-  quarkus.redis.hosts: "redis://localhost:6379"
+  quarkus.redis.hosts: "redis://redis-cache-service.bozo-book-library-dev.svc.cluster.local:6379"
   book.info.service.google.book.api.url: "https://www.googleapis.com/books/v1/volumes"
   book.info.service.max.results.per.page: "10"
 
