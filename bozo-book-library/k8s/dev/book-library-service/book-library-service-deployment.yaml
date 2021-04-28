@@ -2,23 +2,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: book-info-service-deployments
+  name: book-library-service-deployments
   namespace: bozo-book-library-dev
 spec:
   replicas: 1
   selector: 
     matchLabels:
-      app: book-info-service
+      app: book-library-service
       namespace: bozo-book-library-dev
   template:
     metadata:
       labels: 
-        app: book-info-service
+        app: book-library-service
         namespace: bozo-book-library-dev
     spec:
       containers:
-        - name: book-info-service
-          image: abvijaykumar/bozo-book-info-service
+        - name: book-library-service
+          image: abvijaykumar/bozo-book-library-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -28,13 +28,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: book-info-service-svc
+  name: book-library-service-svc
   namespace: bozo-book-library-dev
 
 spec:
-  type: NodePort
   selector: 
-    app: book-info-service
+    app: book-library-service
   
   ports:
     - name: http
