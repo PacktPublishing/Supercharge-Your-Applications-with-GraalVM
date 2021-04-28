@@ -2,23 +2,30 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress 
 metadata:
   name: bozo-book-library-ingress
-  namespace: bozo-book-library-dev
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: ingress.local
-    http:
+  - http:
       paths:
-      - path: /bookinfo
+      - path: /
         pathType: Prefix
         backend:
           service:
             name:  book-library-ui-svc
             port: 
               number: 80
-      - path: / 
+      - path: /bookinfo 
         pathType: Prefix
         backend:
           service:
             name:  book-info-service-svc
             port: 
               number: 8080
+      - path: /booklib
+        pathType: Prefix
+        backend:
+          service:
+            name:  book-library-service-svc
+            port: 
+              number: 8080        
