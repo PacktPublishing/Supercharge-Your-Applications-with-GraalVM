@@ -6,12 +6,13 @@ data:
   quarkus.datasource.db-kind: "postgresql"
   quarkus.datasource.username: "postgres"
   quarkus.datasource.password: ""
-  quarkus.datasource.jdbc.url: "jdbc:postgresql://book-library-postgres-db-svc.bozo-book-library-dev.svc.cluster.local:5431/postgres"
+  quarkus.datasource.jdbc.url: "jdbc:postgresql://book-library-postgres-db-svc.bozo-book-library-dev.svc.cluster.local:5432/postgres"
   quarkus.http.cors: "true"
   quarkus.http.cors.origins: "*"
   quarkus.http.cors.headers: "accept, authorization, content-type, x-requested-with"
   quarkus.http.cors.methods: "GET, OPTIONS, POST"
   quarkus.redis.hosts: "redis://redis-cache-service.bozo-book-library-dev.svc.cluster.local:6379"
+  quarkus.hibernate-orm.database.generation: "drop-and-create"
 
 ---
 apiVersion: v1
