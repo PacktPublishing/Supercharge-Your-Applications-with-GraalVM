@@ -6,7 +6,7 @@ data:
   quarkus.datasource.db-kind: "postgresql"
   quarkus.datasource.username: "postgres"
   quarkus.datasource.password: ""
-  quarkus.datasource.jdbc.url: "jdbc:postgresql://book-library-postgres-db-svc.bozo-book-library-dev.svc.cluster.local:5431/postgre"
+  quarkus.datasource.jdbc.url: "jdbc:postgresql://book-library-postgres-db-svc.bozo-book-library-dev.svc.cluster.local:5431/postgres"
   quarkus.http.cors: "true"
   quarkus.http.cors.origins: "*"
   quarkus.http.cors.headers: "accept, authorization, content-type, x-requested-with"
