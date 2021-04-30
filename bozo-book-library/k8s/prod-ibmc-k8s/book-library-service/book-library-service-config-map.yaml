@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: book-library-service-config-map
+data:
+  quarkus.datasource.db-kind: "postgresql"
+  quarkus.datasource.username: "postgres"
+  quarkus.datasource.password: ""
+  quarkus.datasource.jdbc.url: "jdbc:postgresql://book-library-postgres-db-svc.bozo-book-library-dev.svc.cluster.local:5432/postgres"
+  quarkus.http.cors: "true"
+  quarkus.http.cors.origins: "*"
+  quarkus.http.cors.headers: "accept, authorization, content-type, x-requested-with"
+  quarkus.http.cors.methods: "GET, OPTIONS, POST"
+  quarkus.redis.hosts: "redis://redis-cache-service.bozo-book-library-dev.svc.cluster.local:6379"
+  quarkus.hibernate-orm.database.generation: "drop-and-create"
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: book-library-service-secrets
+type: Opaque
+data:
+  book.info.service.google.book.api.key: QUl6YVN5Q2FKWFdxWVprRmZ2ejZkU2VJZEVuYUNiLXhPMF94TzQw
