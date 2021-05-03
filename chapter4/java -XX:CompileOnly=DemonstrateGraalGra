@@ -1,0 +1,1 @@
+java -XX:CompileOnly=DemonstrateGraalGraph::calculateResult  -XX:-UseOnStackReplacement  -Dgraal.Dump=:1  -XX:+PrintCompilation   -Dgraal.FullUnroll=false   -Dgraal.PartialUnroll=false   -Dgraal.LoopPeeling=false   -Dgraal.LoopUnswitch=false   -Dgraal.OptScheduleOutOfLoops=false   -Dgraal.VectorizeLoops=false  DemonstrateGraalGraph

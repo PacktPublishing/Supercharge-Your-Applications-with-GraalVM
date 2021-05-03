@@ -38,26 +38,6 @@ app.get('/fibonacci', function(request, response) {
     response.send(responseString);
 });
 
-
-app.get('/threading', function(request, response) {
-    var fibonacciCalculatorClass = Java.type("FibonacciCalculatorPolyglotMultithreading");
-    var fibonacciCalculatorObject = new fibonacciCalculatorClass();
-    //fibonacciCalculatorClass.class.static.main([""]);
-    var array = fibonacciCalculatorObject.totalFibonacci(10);
-    
-    var responseString = "<h1>Hello Graal Polyglot - Fibonacci numbers </h1>";
-    responseString = responseString + "<ul>";
-    for (let index = 0; index < array.length; index++) {
-        responseString = responseString + "<li>";
-        responseString = responseString + array[index];
-        responseString = responseString + "</li>";
-    }
-    responseString = responseString + "</ul>";
-    response.send(responseString);
-});
-
-
-
 app.listen(8080, function() {
     console.log('Started the server at 8080')
 });

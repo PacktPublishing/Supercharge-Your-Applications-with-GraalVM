@@ -4,6 +4,9 @@ kind: Deployment
 metadata:
   name: book-info-service-deployments
   namespace: bozo-book-library-dev
+  annotations:
+    kubernetes.io/service-account.name: bozo-book-library-saoc apply -f 
+
 spec:
   replicas: 1
   selector: 

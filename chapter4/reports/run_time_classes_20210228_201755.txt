@@ -1,5 +1,0 @@
-apple.security.KeychainStore
-com.sun.jndi.ldap.Connection
-javax.xml.datatype.DatatypeFactory
-javax.xml.stream.FactoryFinder
-javax.xml.transform.FactoryFinder

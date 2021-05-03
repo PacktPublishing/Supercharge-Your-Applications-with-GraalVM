@@ -6,4 +6,4 @@ message = polyglot.import_value('message')
 square = polyglot.import_value('square')
 
 print ("Square numbers by calling JS->Python: " + str(square(10, 20)))
-print ("Hello messagr from JS: " + message)
+print ("Hello message from JS: " + message)
