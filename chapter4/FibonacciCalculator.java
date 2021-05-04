@@ -21,7 +21,7 @@ class FibonacciCalculator{
         long startTime = System.currentTimeMillis();
         long now = 0;
         long last = startTime;
-        for (int i = 1000000000; i < 1000000010; i++) {
+        for (int i = 1000000000; i < 1000000100; i++) {
             int[] fibs = fibCal.findFibonacci(i);
             
             long total = 0;

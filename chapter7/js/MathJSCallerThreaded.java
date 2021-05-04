@@ -53,7 +53,8 @@ public class MathJSCallerThreaded {
 
             // Simulating the concurrent access by accessing continously.
             while (true) {
-                synchronized(ctx) {
+                //If you do not put this in synchronized block, it will throw java.lang.IllegalStateException exception
+                synchronized(ctx) { 
                     Integer addResult = addFunction.execute(30, 20).asInt();
                     Integer subtractResult = subtractFunction.execute(30, 20).asInt();
                     Integer multiplyResult = multiplyFunction.execute(30, 20).asInt();
