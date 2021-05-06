@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: book-info-service
-          image: abvijaykumar/bozo-book-info-service
+          image:  abvijaykumar/bozo-bookinfo-service:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

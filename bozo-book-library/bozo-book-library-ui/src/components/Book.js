@@ -47,7 +47,7 @@ function Book(props) {
     if (props.removeButton) { buttonText = "Remove from Library" }
 
     const { user } = useContext(CurrentUserContext);
-    const BOOK_LIB_SERVICE_URL= process.env.REACT_APP_BOOK_LIB_SERVICE_URL
+    const BOOK_LIB_SERVICE_URL= process.env.REACT_APP_BOOK_LIB_SERVICE_URL + '/booklib'
 
     const addOrRemoveBook = (value) => {
         if (props.removeButton) { 

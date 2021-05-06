@@ -3,10 +3,12 @@ package org.abvijay.bozobooklibrary.bookinfoservice;
 import io.vertx.core.cli.annotations.Description;
 import java.util.List;
 import javax.inject.Inject;
+import javax.ws.rs.Path;
 import org.abvijay.bozobooklibrary.bookinfoservice.objects.BookInfoSearchResponse;
 
 import org.eclipse.microprofile.graphql.GraphQLApi;
 import org.eclipse.microprofile.graphql.Query;
+
 
 @GraphQLApi
 public class BookInfoResource {

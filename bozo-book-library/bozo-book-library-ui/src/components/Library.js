@@ -17,7 +17,7 @@ const Library = (props) => {
     }, [currentPage, searchQuery]);
 
     const BOOK_INFO_SERVICE_URL = process.env.REACT_APP_BOOK_INFO_SERVICE_URL
-    const BOOK_LIB_SERVICE_URL= process.env.REACT_APP_BOOK_LIB_SERVICE_URL
+    const BOOK_LIB_SERVICE_URL= process.env.REACT_APP_BOOK_LIB_SERVICE_URL + '/booklib'
 
     const getBooks = (bookids) => {
         var bookidsJson = JSON.stringify(bookids);

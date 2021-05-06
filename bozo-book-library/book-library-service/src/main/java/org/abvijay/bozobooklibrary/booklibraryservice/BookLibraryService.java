@@ -17,7 +17,7 @@ import javax.ws.rs.core.Response;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
-@Path("/bozolib")
+@Path("/booklib")
 public class BookLibraryService {
 
     @GET
