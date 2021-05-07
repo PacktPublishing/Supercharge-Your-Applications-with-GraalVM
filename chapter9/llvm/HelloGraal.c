@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    printf("Hello from GraalVM!\n");
+    printf("Welcome to LLVM Graal \n");
     return 0;
 }

@@ -79,7 +79,6 @@ function Book(props) {
     return (
         <div class="u-container-style u-list-item u-repeater-item u-video-cover u-white u-list-item-1">
             <div class="u-container-layout u-similar-container u-container-layout">
-
                 <div class="u-align-center u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-group u-video-cover u-group-1">
                     <div class="u-container-layout u-valign-top u-container-layout-2">
                         <img alt="./noimage.png" class="u-image-1" src={imageLink} />
@@ -87,9 +86,8 @@ function Book(props) {
                         <h6 class="u-custom-font u-font-roboto-condensed u-text u-text-2">{bookname}</h6>
                         <h7 class="u-text u-text-palette-1-base u-text-4">{author}</h7>
                         <p class="u-text u-text-4">{bookdescription}</p>
-                        <Button variant="contained" color="primary" onClick={() => { addOrRemoveBook(bookId) }}>{buttonText}</Button>
+                            <Button variant="contained" color="primary" onClick={() => { addOrRemoveBook(bookId) }}>{buttonText}</Button>
                         <br/>
-
                     </div>
                 </div>
             </div>

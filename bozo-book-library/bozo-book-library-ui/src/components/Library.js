@@ -11,6 +11,10 @@ const Library = (props) => {
     const [searchResponse, setSearchResponse] = useState("");
     const [searchResultTotalCount, setSearchResulTotalCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
+    const { user } = useContext(CurrentUserContext);
+
+    console.log('User '+ user);
+    
 
     useEffect(() => {
         getLibraryBooks();
@@ -21,7 +25,7 @@ const Library = (props) => {
 
     const getBooks = (bookids) => {
         var bookidsJson = JSON.stringify(bookids);
-        fetch(BOOK_INFO_SERVICE_URL+'/graphql', {
+        fetch(BOOK_INFO_SERVICE_URL+'/bookinfo/graphql', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -55,7 +59,7 @@ const Library = (props) => {
 
 
     const getLibraryBooks = () => {
-        fetch(BOOK_LIB_SERVICE_URL+'/get/'+{user})
+        fetch(BOOK_LIB_SERVICE_URL+'/get/'+user)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -82,12 +86,13 @@ const Library = (props) => {
             setCurrentPage(currentPage + 1);
         }
     };
-    const { user } = useContext(CurrentUserContext);
+    
 
     getLibraryBooks()
 
     return (
         <div className="BookList">
+            <h2>{user}</h2>
             {resultObject &&
                 <div>
                     <section class="u-align-center u-clearfix u-grey-5 u-section-1" id="carousel_ed60">
