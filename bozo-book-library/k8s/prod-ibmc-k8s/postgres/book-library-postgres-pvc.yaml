@@ -1,0 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: book-library-postgres-db-pv-claim
+  labels:
+    type: ibm-cloud
+    app: book-library-postgres-db
+spec:
+  volumeName: book-library-postgres-db-pv-volume
+  storageClassName: ""
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi

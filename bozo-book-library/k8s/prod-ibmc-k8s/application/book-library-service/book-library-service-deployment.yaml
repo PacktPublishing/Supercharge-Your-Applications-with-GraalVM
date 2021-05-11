@@ -16,9 +16,10 @@ spec:
         app: book-library-service
         namespace: bozo-book-library-dev
     spec:
+      serviceAccountName: bozo-book-library-sa
       containers:
         - name: book-library-service
-          image: abvijaykumar/bozo-book-library-service:latest
+          image: abvijaykumar/bozo-book-library-service:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080

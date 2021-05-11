@@ -10,7 +10,9 @@ spec:
   - port: 5601
   selector:
     app: kibana
+
 ---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -34,8 +36,10 @@ spec:
         resources:
           limits:
             cpu: 1000m
+            memory: 1Gi
           requests:
-            cpu: 100m
+            cpu: 700m
+            memory: 1Gi
         env:
           - name: ELASTICSEARCH_URL
             value: http://elasticsearch:9200

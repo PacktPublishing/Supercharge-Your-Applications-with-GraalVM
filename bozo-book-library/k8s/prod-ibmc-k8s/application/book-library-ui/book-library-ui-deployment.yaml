@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: book-library-ui-service
-          image: abvijaykumar/bozo-book-library-ui-service:prodv9
+          image: abvijaykumar/bozo-book-library-ui-service:prodv17
           imagePullPolicy: Always
           ports:
             - containerPort: 80
