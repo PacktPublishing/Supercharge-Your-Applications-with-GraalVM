@@ -1,1 +1,0 @@
-./mvnw package -Pnative -Dquarkus.native.container-build=true -Dquarkus.container-image.build=true -Dquarkus.container-image.username=abvijaykumar -Dquarkus.container-image.name=bozo-book-library-service -Dquarkus.container-image.group=abvijaykumar

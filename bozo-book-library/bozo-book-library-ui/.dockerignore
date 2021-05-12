@@ -1,7 +1,0 @@
-/node_modules
-/build
-.git
-*.md
-.gitignore
-.env
-env-config.js

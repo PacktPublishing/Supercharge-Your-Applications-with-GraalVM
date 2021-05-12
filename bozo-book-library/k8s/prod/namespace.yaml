@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: bozo-book-library-dev
-  labels:
-    name: bozo-book-library-dev
