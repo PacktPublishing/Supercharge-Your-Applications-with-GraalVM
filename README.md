@@ -6,12 +6,8 @@ This is the code repository for [Supercharge Your Applications with GraalVM](htt
 
 **Hands-on examples to optimize and extend your code using GraalVM's high performance and polyglot capabilities**
 
-Gain a solid understanding of GraalVM and how it works under the hood.
-Work with GraalVM's high performance optimizing compiler and see how it can be used in both JIT (just-in-time) and AOT (ahead-of-time) modes.
-Get to grips with the various optimizations that GraalVM performs at runtime.
-Use advanced tools to analyze and diagnose performance issues in the code.
-Compile, embed, run, and interoperate between languages using Truffle on GraalVM.
-Build optimum microservices using popular frameworks such as Micronaut and Quarkus to create cloud-native applications.
+This book is a hands-on guide, with step-by-step instructions on how to work with GraalVM. Starting with a quick introduction to the GraalVM architecture and how things work under the hood, you'll discover the performance benefits of running your Java applications on GraalVM. You'll then learn how to create native images and understand how AOT (ahead-of-time) can improve application performance significantly. The book covers examples of building polyglot applications that will help you explore the interoperability between languages running on the same VM. You'll also see how you can use the Truffle framework to implement any language of your choice to run optimally on GraalVM.
+By the end of this book, you'll not only have learned how GraalVM is beneficial in cloud-native and microservices development but also how to leverage its capabilities to create high-performing polyglot applications.
 
 ## What is this book about?
 GraalVM is a universal virtual machine that allows programmers to embed, compile, interoperate, and run applications written in JVM languages such as Java, Kotlin, and Groovy; non-JVM languages such as JavaScript, Python, WebAssembly, Ruby, and R; and LLVM languages C and C++. 
