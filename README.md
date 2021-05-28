@@ -50,6 +50,8 @@ With the following software and hardware list you can run all code files present
 | 8, 9 | GraalVM, Java, Python, R, Truffle, C | Windows, Mac OS X, and Linux (Any) |
 | 10 | GraalVM, Spring Boot, Micronaut, Quarkus, fn project | Windows, Mac OS X, and Linux (Any) |
 
+## Code in Action
+Please visit the following link to check the CiA videos: https://bit.ly/3eM5ewO
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800564909_ColorImages.pdf).
 
 ### Related products
