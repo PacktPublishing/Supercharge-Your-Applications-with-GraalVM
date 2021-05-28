@@ -5,22 +5,24 @@
 This is the code repository for [Supercharge Your Applications with GraalVM](https://www.packtpub.com/product/supercharge-your-applications-with-graalvm/9781800564909?utm_source=github&utm_medium=repository&utm_campaign=9781800564909), published by Packt.
 
 **Hands-on examples to optimize and extend your code using GraalVM's high performance and polyglot capabilities**
+
 Gain a solid understanding of GraalVM and how it works under the hood
 Work with GraalVM's high performance optimizing compiler and see how it can be used in both JIT (just-in-time) and AOT (ahead-of-time) modes
 Get to grips with the various optimizations that GraalVM performs at runtime
 Use advanced tools to analyze and diagnose performance issues in the code
 Compile, embed, run, and interoperate between languages using Truffle on GraalVM
 Build optimum microservices using popular frameworks such as Micronaut and Quarkus to create cloud-native applications
+
 ## What is this book about?
 GraalVM is a universal virtual machine that allows programmers to embed, compile, interoperate, and run applications written in JVM languages such as Java, Kotlin, and Groovy; non-JVM languages such as JavaScript, Python, WebAssembly, Ruby, and R; and LLVM languages C and C++. 
 
 This book covers the following exciting features:
-Gain a solid understanding of GraalVM and how it works under the hood
-Work with GraalVM's high performance optimizing compiler and see how it can be used in both JIT (just-in-time) and AOT (ahead-of-time) modes
-Get to grips with the various optimizations that GraalVM performs at runtime
-Use advanced tools to analyze and diagnose performance issues in the code
-Compile, embed, run, and interoperate between languages using Truffle on GraalVM
-Build optimum microservices using popular frameworks such as Micronaut and Quarkus to create cloud-native applications
+- Gain a solid understanding of GraalVM and how it works under the hood
+- Work with GraalVM's high performance optimizing compiler and see how it can be used in both JIT (just-in-time) and AOT (ahead-of-time) modes
+- Get to grips with the various optimizations that GraalVM performs at runtime
+- Use advanced tools to analyze and diagnose performance issues in the code
+- Compile, embed, run, and interoperate between languages using Truffle on GraalVM
+- Build optimum microservices using popular frameworks such as Micronaut and Quarkus to create cloud-native applications
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1800564902) today!
 
@@ -50,10 +52,10 @@ With the following software and hardware list you can run all code files present
 | 8, 9 | GraalVM, Java, Python, R, Truffle, C | Windows, Mac OS X, and Linux (Any) |
 | 10 | GraalVM, Spring Boot, Micronaut, Quarkus, fn project | Windows, Mac OS X, and Linux (Any) |
 
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800564909_ColorImages.pdf).
+
 ## Code in Action
 Please visit the following link to check the CiA videos: https://bit.ly/3eM5ewO
-
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781800564909_ColorImages.pdf).
 
 ### Related products
 * Jakarta EE Cookbook - Second Edition [[Packt]](https://www.packtpub.com/product/jakarta-ee-cookbook-second-edition/9781838642884?utm_source=github&utm_medium=repository&utm_campaign=9781838642884) [[Amazon]](https://www.amazon.com/dp/1838642889)
